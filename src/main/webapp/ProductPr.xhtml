@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <h:form>
+        <h:dataTable class="data" id="products" value="#{adminCDIBean.pro}" var="product" border="1">
+
+                <h:column>
+                    <f:facet name="header">Pid</f:facet>
+                    <h:outputText value="#{product.pid}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Pname</f:facet>
+                    <h:outputText value="#{product.pname}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Ram</f:facet>
+                    <h:outputText value="#{product.ram}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Processor</f:facet>
+                    <h:outputText value="#{product.processor}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Screen Size</f:facet>
+                    <h:outputText value="#{product.screenSize}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Color</f:facet>
+                    <h:outputText value="#{product.color}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Price</f:facet>
+                    <h:outputText value="#{product.price}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Internal Storage</f:facet>
+                    <h:outputText value="#{product.internalstorage}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Network Type</f:facet>
+                    <h:outputText value="#{product.networktype}"/>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Battery</f:facet>
+                    <h:outputText value="#{product.batterycapacity}"/>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Description</f:facet>
+                    <h:outputText value="#{product.description}"/>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Quantity</f:facet>
+                    <h:outputText value="#{product.quantity}"/>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Image</f:facet>
+                    <!--<h:graphicImage style="height: 60px" value="#{product.productimage}" />-->
+                    <h:outputText value="#{product.productimage}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Actions</f:facet>
+
+                    <h:commandButton value="Delete" styleClass="D-button" >
+                        <f:ajax execute="@form" render="@form" listener="#{adminCDIBean.removeProductmaster(product.pid)}"/>
+                    </h:commandButton>
+
+                </h:column>
+            </h:dataTable>
+              </h:form>
+    </h:body>
+</html>

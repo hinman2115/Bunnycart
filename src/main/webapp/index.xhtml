@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet"/>
+        <title>Mobile Mart</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="assets/css/fontawesome.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/owl.css"/>
+    </h:head>
+    <h:body>
+<!--        <h3>#{sessionScope.user}</h3>-->
+       
+        <!-- ***** Preloader Start ***** -->
+        <div id="preloader">
+            <div class="jumper">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>  
+        <!-- ***** Preloader End ***** -->
+
+        <!-- Header -->
+        <div class="sub-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                        <ul class="left-info">
+                            <li><a href="#"><i class="fa fa-envelope"></i>NamanKhatri@gmail.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>+91 9106479647</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="right-icons">
+                            <span>#{sessionScope.user}</span>
+                            <li><a href="login.jsf"><i class="fa fa-user"></i></a></li>
+                             
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <!--<li><a href="#"><i class="fa fa-instagram"></i></a></li>-->
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <!--<li> <h5>#{sessionScope.user}</h5></li>-->
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.jsf"><h2>MobileMart</h2></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.jsf">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.jsf">Products</a>
+                            </li>
+
+                            <li class="nav-item dropdown ">
+                                <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item " href="about.jsf">About Us</a>
+                                    <a class="dropdown-item" href="blog.jsf">Blog</a>
+
+                                    <a class="dropdown-item" href="terms.jsf">Terms</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.jsf">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <!-- Page Content -->
+        <!-- Banner Starts Here -->
+        <div class="main-banner header-text" id="top">
+            <div class="Modern-Slider">
+                <!-- Item -->
+                <div class="item item-1">
+                    <div class="img-fill">
+                        <div class="text-content">
+                            <h6> "A Comprehensive Guide to Mobile Mart's Must-Have Additions"</h6>
+                            
+                            <p> The essential features customers should consider when purchasing a smartphone from Mobile Mart. It might include aspects like battery life, camera quality, display technology, processor speed, etc.</p>
+                            <a href="products.jsf" class="filled-button">Products</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-2">
+                    <div class="img-fill">
+                        <div class="text-content">
+                            <h6> "Empowering Connectivity, Redefining Mobility"</h6>
+                            
+                            <p>Our mission is to empower you by offering a diverse range of mobile devices that cater to your unique needs, keeping you connected effortlessly.</p>
+                            <a href="about.jsf" class="filled-button">About Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-3">
+                    <div class="img-fill">
+                        <div class="text-content">
+                            <h6>alias officia qui quae vitae natus!</h6>
+                    
+                            <p>This page aims to make it easy for visitors to reach out to Mobile Mart, providing multiple communication options and assuring them of a prompt and helpful response. </p>
+                            <a href="contact.jsf" class="filled-button">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+            </div>
+        </div>
+        <!-- Banner Ends Here -->
+
+        <div class="request-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Request a call back right now ?</h4>
+                        <span>Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</span>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="contact.jsf" class="border-button">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <h2>Featured <em>Products</em></h2>
+                            
+                        </div>
+                    </div>
+                    <ui:repeat value="#{adminCDIBean.pro}" var="product">
+                        <div class="col-md-4">
+                            <div class="service-item">
+                                <h:graphicImage library="images" name="#{product.productimage}" class="img-responsive" alt="image" />
+                                <div class="down-content">
+                                    <span class="name">Name:#{product.pname}</span>
+                                    <div style="margin-bottom:10px;">
+                                        <span class="price">Internal Storage:#{product.internalstorage}</span> <br/> 
+                                        <span class="price">Color:#{product.color}</span> <br/>
+                                        <span class="price">Network Type:#{product.networktype}</span> <br/>
+                                        <span class="price">Ram:#{product.ram}</span> <br/>
+                                        <span class="price">₹#{product.price}/price</span> <br/>
+                                        <span class="price">Battery:#{product.batterycapacity}/mAh</span> <br/>
+                                        <span class="price">Processor:#{product.processor}</span> <br/>
+                                        <span class="price">ScreenSize:#{product.screenSize}/inch</span> <br/>
+                                    </div>
+
+                                    <p>#{product.description}</p>
+                                    <!--                                    <h:form>
+                                                                        </h:form>-->
+                                    <!--<a href="product-details.jsf?pid=#{vehicle.pid}"  class="filled-button">View More</a>-->
+                                    <a  onclick="redirectToDetail('#{product.pid}')" class="filled-button"
+                                        >Add To Cart</a
+                                    >
+                                </div>
+                            </div>
+
+                            <br/>
+                        </div>
+                    </ui:repeat>
+                </div>
+            </div>
+        </div>
+
+        <div class="fun-facts">
+            <div class="container">
+                <div class="more-info-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="left-image">
+                                <img src="assets/images/about-1-570x350.jpg" class="img-fluid" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-6 align-self-center">
+                            <div class="right-content">
+                                <span>Who we are</span>
+                                <h2>Get to know about <em>our company</em></h2>
+                                <p>Curabitur pulvinar sem a leo tempus facilisis. Sed non sagittis neque. Nulla conse quat tellus nibh, id molestie felis sagittis ut. Nam ullamcorper tempus ipsum in cursus</p>
+                                <a href="about.jsf" class="filled-button">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <h2>What they say <em>about us</em></h2>
+                            <span>testimonials from our greatest clients</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="owl-testimonials owl-carousel">
+
+                            <div class="testimonial-item">
+                                <div class="inner-content">
+                                    <h4>Naman Khatri</h4>
+                                    <span>Chief Financial Analyst</span>
+                                    <p>"Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus."</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="testimonial-item">
+                                <div class="inner-content">
+                                    <h4>Tirth khatri</h4>
+                                    <span>Market Specialist</span>
+                                    <p>"In eget leo ante. Sed nibh leo, laoreet accumsan euismod quis, scelerisque a nunc. Mauris accumsan, arcu id ornare malesuada, est nulla luctus nisi."</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="testimonial-item">
+                                <div class="inner-content">
+                                    <h4>Vatsal bhavsar</h4>
+                                    <span>Chief Accountant</span>
+                                    <p>"Ut ultricies maximus turpis, in sollicitudin ligula posuere vel. Donec finibus maximus neque, vitae egestas quam imperdiet nec. Proin nec mauris eu tortor consectetur tristique."</p>
+                                </div>
+                               
+                            </div>
+
+                            <div class="testimonial-item">
+                                <div class="inner-content">
+                                    <h4>Hinali kaila</h4>
+                                    <span>Marketing Head</span>
+                                    <p>"Curabitur sollicitudin, tortor at suscipit volutpat, nisi arcu aliquet dui, vitae semper sem turpis quis libero. Quisque vulputate lacinia nisl ac lobortis."</p>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Footer Starts Here -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-item">
+                        <h4>Mobile Mart</h4>
+                        <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
+                        <ul class="social-icons">
+                            <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 footer-item">
+                        <h4>Additional Pages</h4>
+                        <ul class="menu-list">
+
+                            <li><a href="about.jsf">About Us</a></li>
+                            <li><a href="blog.jsf">Blog</a></li>
+                            <li><a href="contact.jsf">Contact Us</a></li>
+                            <li><a href="terms.jsf">Terms</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footer-item last-item">
+                        <h4>Contact Us</h4>
+                        <div class="contact-form">
+                            <form id="contact footer-contact" action="" method="post">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <fieldset>
+                                            <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required=""/>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <fieldset>
+                                            <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required=""/>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Copyright © 2023 Mobile Mart
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Additional Scripts -->
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/owl.js"></script>
+        <script src="assets/js/slick.js"></script>
+        <script src="assets/js/accordions.js"></script>
+          <script>
+    function redirectToDetail(pid) {
+//        alert(pid);
+        window.location.href = 'product-details.jsf?pid=' + pid;
+    }
+        </script>
+
+        <script language = "text/Javascript">
+            cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+            function clearField(t) {                   //declaring the array outside of the
+                if (!cleared[t.id]) {                      // function makes it static and global
+                    cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                    t.value = '';         // with more chance of typos
+                    t.style.color = '#fff';
+                }
+            }
+        </script>
+    </h:body>
+</html>
+

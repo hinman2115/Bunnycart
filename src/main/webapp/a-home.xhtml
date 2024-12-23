@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>     
+       
+        <link rel="stylesheet" href="assets/css/style_2.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+    </h:head>
+    <h:body>
+       
+        <h5>#{sessionScope.admin}</h5>
+        <nav>
+        <div class="logo-name">
+            
+            <span class="logo_name">MobileMart</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="a-product.jsf">
+                    <i class="uil uil-label-alt"></i>
+                    <span class="link-name">Add Product</span>
+                </a></li>
+                
+                
+                <li><a href="a-category.jsf">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Category</span>
+                </a></li>
+                <li><a href="a-orderdetails.jsf">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">OrderDetails</span>
+                </a></li>
+            
+              
+            
+            <ul class="logout-mode">
+                <li><a href="login.jsf">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+            </ul>
+            </ul>
+        </div>
+    </nav>
+
+   <section class="dashboard">
+<!--       <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here..."/>
+            </div>
+            
+            <img src="images/profile.jpg" alt="img"/>
+        </div>-->
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-user-check"></i>
+                        <span class="text"><a href="a_productdetails.jsf">Product Details</a></span>
+                        <!--<span class="number">1000</span>-->
+                    </div>
+                     <!--<a href="a_cartdetails.jsf">-->
+                    <div class="box box2" >
+                       
+                        <i class="uil uil-shopping-bag"></i>
+                        <span class="text" > <a href="a_cartdetails.jsf">Cart Details</a></span>
+                        <a href="a_cartdetails.jsf"></a>
+                        <!--<span class="number">1.5K</span>-->
+                    </div>
+               <!--</a>-->
+<!--                    <div class="box box3">
+                        <i class="uil uil-rupee-sign"></i>
+                        <span class="text">TurnOver</span>
+                        <span class="number">2M</span>
+                    </div>-->
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+        <script src="assets/js/script_a.js"></script>
+    </h:body>
+</html>

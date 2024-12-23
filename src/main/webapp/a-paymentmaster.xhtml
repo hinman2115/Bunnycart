@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <h:form enctype="multipart/form-data">
+            
+              <h:outputLabel for="input6" value="payment_Id:"/>
+             <h:inputText id="input6" value="#{adminCDIBean.pid}" /><br/><br/>
+             
+             <h:outputLabel for="input6" value="payment_type:"/>
+            <h:selectOneMenu id="paymentMethod" value="#{adminCDIBean.payment_type}" styleClass="form-control">
+                <f:selectItem itemLabel="-- Choose Payment method --" itemValue="" />
+                <f:selectItem itemLabel="Cash" itemValue="cash" />
+            </h:selectOneMenu>  <br/><br/>
+          
+             <h:outputLabel for="input6" value="Status:"/>
+             <h:selectOneMenu id="input4" value="#{adminCDIBean.status}" styleClass="form-control">
+                <f:selectItem itemLabel="-- Status--" itemValue="" />
+                <f:selectItem itemLabel="Paid" itemValue="cash" />
+                <f:selectItem itemLabel="Un-Paid" itemValue="cash" />
+            </h:selectOneMenu>  <br/><br/>
+           
+             <h:outputLabel for="input5" value="Oreder_id:"/>
+             <h:inputText id="input5" value="#{adminCDIBean.oid}" /><br/><br/>
+
+            <h:commandButton value="Insert" action="#{adminCDIBean.addPaymentmaster()}" /><br/><br/>
+            
+             <h:dataTable value="#{adminCDIBean.getAllPaymentmaster()}" var="product" border="2">
+               
+                 <h:column>
+                    <f:facet name="header">payment_Id</f:facet>
+                        #{product.pid}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Payment_Type</f:facet>
+                        #{product.paymentType}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Status</f:facet>
+                        #{product.status}
+                </h:column>
+                
+                 <h:column>
+                    <f:facet name="header">Order_id</f:facet>
+                        #{product.oid}
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">Actions</f:facet>
+                    <h:form>
+                        <h:commandButton value="Edit" styleClass="edit-btn"/>
+                        <h:commandButton value="Delete" action="#{adminBean.deleteProduct(product.productid)}" styleClass="delete-btn" immediate="true"/>
+                    </h:form>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            /* CSS styles for table and columns */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+
+            th, td {
+                border: 1px solid #ccc;
+                padding: 8px;
+                text-align: left;
+            }
+
+            /* Style for table header */
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+
+            /* Style for alternating row colors */
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            /* Responsive styling for smaller screens */
+            @media (max-width: 576px) {
+                table {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                th, td {
+                    padding: 6px;
+                }
+            }
+        </style>
+    </h:head>
+    <h:body>
+        
+        <a href="a-product.jsf">Delete Any Product</a><br/><br/>
+         <h:dataTable id="products" value="#{adminCDIBean.pro}" var="product" border="2">
+                
+                 <h:column>
+                    <f:facet name="header">Pid</f:facet>
+                       <h:outputText value="#{product.pid}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Pname</f:facet>
+                        <h:outputText value="#{product.pname}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Ram</f:facet>
+                        <h:outputText value="#{product.ram}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Processor</f:facet>
+                       <h:outputText value="#{product.processor}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Screen Size</f:facet>
+                       <h:outputText value="#{product.screenSize}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Color</f:facet>
+                        <h:outputText value="#{product.color}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Price</f:facet>
+                        <h:outputText value="#{product.price}"/>
+                </h:column>
+                   <h:column>
+                    <f:facet name="header">Internal Storage</f:facet>
+                       <h:outputText value="#{product.internalstorage}"/>
+                </h:column>
+                  <h:column>
+                    <f:facet name="header">Network Type</f:facet>
+                       <h:outputText value="#{product.networktype}"/>
+                </h:column>
+
+                  <h:column>
+                    <f:facet name="header">Battery</f:facet>
+                       <h:outputText value="#{product.batterycapacity}"/>
+                </h:column>
+
+                  <h:column>
+                    <f:facet name="header">Description</f:facet>
+                        <h:outputText value="#{product.description}"/>
+                </h:column>
+
+                  <h:column>
+                    <f:facet name="header">Quantity</f:facet>
+                       <h:outputText value="#{product.quantity}"/>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Image</f:facet>
+                    <!--<h:graphicImage style="height: 60px" value="#{product.productimage}" />-->
+                    <h:outputText value="#{product.productimage}"/>
+                </h:column>
+                
+            </h:dataTable>
+    </h:body>
+</html>
+
