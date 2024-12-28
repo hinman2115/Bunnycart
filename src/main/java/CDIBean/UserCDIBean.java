@@ -109,36 +109,70 @@ private HttpSession session;
     }
 
   public String addCart() {
-       
-        System.out.println("Email: " + email);
-        System.out.println("ProductId: " + pid);
-        System.out.println("Quantity: " + qty); 
-//        String email = (String) session.getAttribute("user");
-        // Instantiate a new Addcart object
-//        Addcart newCart = new Addcart();
-        
-        // Fetch necessary details (Productmaster and Registration) from the ra object
-//        Productmaster product = ra.getProductDetails(Productmaster.class, pid);
-//        Registration user= ra.getRegistrationByEmail(Registration.class, email);
-        
-     
-//        newCart.setPid(product);
-//        newCart.setEmail(user);
-        //newCart.setQty(qty);
+        email = (String) session.getAttribute("user"); // Get email from session
+        if (email == null || email.isEmpty()) {
+            System.out.println("User email is not available in the session.");
+            return "errorPage"; // Redirect to an appropriate error page
+        }
 
-        // Perform any necessary operations like adding to the database
-//        ra.addCart(newCart, cart.class, String.valueOf(quantity));
-          //ra.addToCart(Response.class, qty);
-          
-          userBean.addAddCart(email, 0, 0);
-          
-        // Log information or perform additional operations if needed
-        System.out.println("Email: " + email);
+        System.out.println("Email: " + email); // Debug print
         System.out.println("ProductId: " + pid);
         System.out.println("Quantity: " + qty);
+
+        try {
+            userBean.addAddCart(email, pid, Integer.valueOf(qty));
+
+            // Email sending logic
+            String mail = "namanramfale2220@gmail.com";  // Sender's email
+            String pass = "icxa mdao xsju wzmw";  // Sender's password or App Password
+            String host = "smtp.gmail.com";  // SMTP host (Gmail in this case)
+            String from = mail;  // Directly use the email
+            String password = pass;  // Directly use the password
+            String port = "465";
+
+            Properties prop = new Properties();
+            prop.put("mail.smtp.user", from);
+            prop.put("mail.smtp.host", host);
+            prop.put("mail.smtp.port", port);
+            prop.put("mail.smtp.starttls.enable", "true");
+            prop.put("mail.smtp.auth", "true");
+            prop.put("mail.smtp.debug", "true");
+            prop.put("mail.smtp.socketFactory.port", port);
+            prop.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+            prop.put("mail.smtp.socketFactory.fallback", "false");
+
+            Session session1 = Session.getInstance(prop, new javax.mail.Authenticator() {
+                @Override
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication(from, password);
+                }
+            });
+
+            session1.setDebug(true);
+            MimeMessage message = new MimeMessage(session1);
+            message.setFrom(new InternetAddress(from));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
+            message.setSubject("Item Added to Cart");
+
+            String htmlContent = "<h1>Thank you for adding to your cart!</h1>"
+                    + "<p>You have added <b>" + pname + "</b> to your cart.</p>"
+                    + "<p>Quantity: " + qty + "</p>"
+                    + "<p>Total Price: " + (Integer.valueOf(qty) * Integer.valueOf(productprice)) + "</p>";
+            message.setContent(htmlContent, "text/html");
+
+            Transport.send(message);
+            System.out.println("Email sent successfully!");
+
+        } catch (MessagingException ex) {
+            ex.printStackTrace();
+            return "errorPage"; // Redirect to error page on failure
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return "errorPage";
+        }
+
         return "checkout.jsf";
-           
-   }
+    }
     
     
 //    public void addToCart() {
